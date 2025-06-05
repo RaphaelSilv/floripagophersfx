@@ -6,12 +6,9 @@ import (
 	"go.uber.org/fx"
 )
 
-// "go.uber.org/fx"
-
 func main() {
 	app := fx.New(
 		internal.Module,
-		// Start HTTP Server
 		fx.Invoke(func(handler *handler.Handler) {
 			handler.Process("123")
 		}),

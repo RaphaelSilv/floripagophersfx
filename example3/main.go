@@ -1,20 +1,19 @@
 package main
 
 import (
+	"github.com/raphaelsilv/fgophers/example3/client"
 	"github.com/raphaelsilv/fgophers/example3/handler"
 	"github.com/raphaelsilv/fgophers/example3/repository"
 	"github.com/raphaelsilv/fgophers/example3/service"
 	"go.uber.org/fx"
 )
 
-// 	"go.uber.org/fx"
-
 func main() {
 	app := fx.New(
 		fx.Provide(
-			//service.NewService,
-			//	repository.NewUserRepository,
-			//	client.NewUserClient,
+			annotate(),
+			repository.NewUserRepository,
+			client.NewUserClient,
 			handler.NewHandler,
 		),
 		// Start HTTP Server
@@ -38,6 +37,7 @@ func annotate() interface{} {
 	return fx.Annotate(
 		service.NewService,
 		fx.As(new(handler.Service)),
-		fx.From(new(*repository.UserRepository)),
+		fx.From(new(*repository.UserRepository), new(*client.UserClient)),
+		//fx.From(new(*client.UserClient)),
 	)
 }

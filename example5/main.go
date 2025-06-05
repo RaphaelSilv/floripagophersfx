@@ -9,7 +9,8 @@ import (
 func main() {
 	app := fx.New(
 		compliancefx.Module,
-		// Start HTTP Server
+		compliancefx.Module,
+		compliancefx.Module,
 		fx.Invoke(func(handler *handler.Handler) {
 			handler.Process("123")
 		}),

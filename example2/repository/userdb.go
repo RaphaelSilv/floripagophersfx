@@ -5,10 +5,6 @@ import (
 	"github.com/raphaelsilv/fgophers/example2/models"
 )
 
-type UserRetriever interface {
-	GetUser(string) models.User
-}
-
 type UserRepository struct{}
 
 func NewUserRepository() *UserRepository {
