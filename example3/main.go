@@ -11,7 +11,7 @@ import (
 func main() {
 	app := fx.New(
 		fx.Provide(
-			annotate(),
+			service.NewService,
 			repository.NewUserRepository,
 			client.NewUserClient,
 			handler.NewHandler,

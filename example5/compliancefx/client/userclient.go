@@ -2,7 +2,7 @@ package client
 
 import (
 	"fmt"
-	"github.com/raphaelsilv/fgophers/example4/models"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/models"
 	"go.uber.org/fx"
 )
 

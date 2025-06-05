@@ -9,8 +9,6 @@ import (
 func main() {
 	app := fx.New(
 		compliancefx.Module,
-		compliancefx.Module,
-		compliancefx.Module,
 		fx.Invoke(func(handler *handler.Handler) {
 			handler.Process("123")
 		}),

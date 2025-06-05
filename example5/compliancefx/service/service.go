@@ -2,9 +2,10 @@ package service
 
 import (
 	"fmt"
-	"github.com/raphaelsilv/fgophers/example4/client"
-	"github.com/raphaelsilv/fgophers/example4/handler"
-	"github.com/raphaelsilv/fgophers/example4/models"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/client"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/handler"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/models"
+
 	"go.uber.org/fx"
 )
 

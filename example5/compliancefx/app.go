@@ -1,10 +1,10 @@
 package compliancefx
 
 import (
-	"github.com/raphaelsilv/fgophers/example4/client"
-	"github.com/raphaelsilv/fgophers/example4/handler"
-	"github.com/raphaelsilv/fgophers/example4/repository"
-	"github.com/raphaelsilv/fgophers/example4/service"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/client"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/handler"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/repository"
+	"github.com/raphaelsilv/fgophers/example5/compliancefx/service"
 	"go.uber.org/fx"
 )
 

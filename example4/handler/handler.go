@@ -2,7 +2,7 @@ package handler
 
 import "go.uber.org/fx"
 
-var module = fx.Provide(
+var Module = fx.Provide(
 	NewHandler,
 )
 
