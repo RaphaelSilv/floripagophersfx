@@ -29,7 +29,7 @@ func main() {
 	fx.New(
 		fx.Provide(fx.Annotate(NewItemCache, fx.ResultTags(`name:"item_cache"`))),
 		fx.Provide(fx.Annotate(NewAddressCache, fx.ResultTags(`name:"address_cache"`))),
-		fx.Provide(fx.Annotate(NewItemRepository, fx.ParamTags(`name:"address_cache"`))),
+		fx.Provide(fx.Annotate(NewItemRepository)),
 		fx.Invoke(func(repository *ItemRepository) { fmt.Printf("repository cache: %s", repository.itemCache.entity) }),
 	).Run()
 }

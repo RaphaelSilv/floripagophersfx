@@ -11,7 +11,7 @@ import (
 func main() {
 	app := fx.New(
 		fx.Provide(
-			service.NewService,
+			annotate(),
 			repository.NewUserRepository,
 			client.NewUserClient,
 			handler.NewHandler,
@@ -37,7 +37,7 @@ func annotate() interface{} {
 	return fx.Annotate(
 		service.NewService,
 		fx.As(new(handler.Service)),
-		fx.From(new(*repository.UserRepository), new(*client.UserClient)),
+		fx.From(new(*repository.UserRepository)),
 		//fx.From(new(*client.UserClient)),
 	)
 }
